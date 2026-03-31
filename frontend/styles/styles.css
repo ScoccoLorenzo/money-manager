@@ -1,0 +1,17 @@
+.movement-form {
+  background-color: aqua;
+}
+.movement-display {
+  height: 30px;
+  width: 1fr;
+  background-color: brown;
+  display: flex;
+  align-items: center;
+}
+.movement-display p {
+  margin-left: 20px;
+}
+.movement-display button {
+  margin-left: 25px;
+  height: 25px;
+}
