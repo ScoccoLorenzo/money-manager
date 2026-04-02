@@ -1,4 +1,4 @@
-export const data = [];
+export let data = [];
 
 export class Movement {
   constructor(type, value, scope, date, notes) {
