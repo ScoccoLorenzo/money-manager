@@ -4,11 +4,12 @@ export function initializeSaveMovement(object, memory) {
     .addEventListener('submit', function(e) {
       e.preventDefault();
       const movementType = document.querySelector('[name="movement-type"]');
+      const movementScope = document.querySelector('[name="movement-scope"]');
 
       const movement = new object(
         movementType.value,
         this.movementValue.value,
-        this.movementScope.value,
+        movementScope.value,
         this.movementDate.value,
         this.movementNotes.value
       );
