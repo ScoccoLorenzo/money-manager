@@ -10,7 +10,7 @@ function renderMovements(data, container) {
         <p>${movement.date}</p>
         <p>${movement.notes}</p>
         <button type="button" class="js-delete-movement-button" data-index="${index}">Delete</button>
-        <button type="submit">Submit</button>
+        <button type="submit" data-index="${index}">Submit</button>
       </form>
       `
     })
