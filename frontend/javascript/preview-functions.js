@@ -10,7 +10,7 @@ function renderMovements(data, container) {
         <p>${movement.date}</p>
         <p>${movement.notes}</p>
         <button type="button" class="js-delete-movement-button" data-index="${index}">Delete</button>
-        <button type="submit" data-index="${index}">Submit</button>
+        <button type="submit" data-index="${index}" class="js-submit-button">Submit</button>
       </form>
       `
     })
@@ -38,4 +38,26 @@ export function initializeDeleteButtons(data, container){
         renderMovements(data, container);
       }
     })
+}
+
+export function initializeSubmitMovement(data, container) {
+  container.addEventListener('submit', async function(e) {
+    e.preventDefault();
+    //dati da inviare
+    const index = Number(e.submitter.dataset.index)
+
+    try {
+      const res = await fetch('/api', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({index: index})
+      })
+
+      const data = await res.json()
+      console.log(data)
+
+    } catch(err) {
+      console.log(err)
+    }
+  })
 }
