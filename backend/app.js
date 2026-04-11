@@ -4,9 +4,8 @@ const app = express()
 app.use(express.json())
 app.use(express.static('../frontend'))
 
-app.post('/api', (req, res) => {
-  const {index} = req.body
-  console.log(index)
+app.post('/', (req, res) => {
+  console.log(req.body)
   res.json({result: true, message: 'success'})
 })
 

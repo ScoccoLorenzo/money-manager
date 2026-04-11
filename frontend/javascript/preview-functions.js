@@ -45,16 +45,17 @@ export function initializeSubmitMovement(data, container) {
     e.preventDefault();
     //dati da inviare
     const index = Number(e.submitter.dataset.index)
+    const movementToPost = data[index]
 
     try {
-      const res = await fetch('/api', {
+      const res = await fetch('/', {
         method: 'POST',
         headers: {'Content-Type': 'application/json'},
-        body: JSON.stringify({index: index})
+        body: JSON.stringify(movementToPost)
       })
 
-      const data = await res.json()
-      console.log(data)
+      const completedRes = await completedRes.json()
+      console.log(completedRes) // success-not success
 
     } catch(err) {
       console.log(err)

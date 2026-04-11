@@ -8,4 +8,4 @@ const container = document.querySelector('.movement-display-container');
 initializeSaveMovement(Movement, data);
 initializeMovementsDisplay(data, container);
 initializeDeleteButtons(data, container);
-initializeSubmitMovement(data, container)
+initializeSubmitMovement(data, container);
