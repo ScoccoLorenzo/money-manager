@@ -1,11 +1,13 @@
 const express = require('express')
 const app = express()
 
+const {storeNewMovement} = require('./middleware.js')
+
+
 app.use(express.json())
 app.use(express.static('../frontend'))
 
-app.post('/', (req, res) => {
-  console.log(req.body)
+app.post('/', storeNewMovement, (req, res) => {
   res.json({result: true, message: 'success'})
 })
 
