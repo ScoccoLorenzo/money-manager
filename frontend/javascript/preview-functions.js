@@ -54,7 +54,7 @@ export function initializeSubmitMovement(data, container) {
         body: JSON.stringify(movementToPost)
       })
 
-      const completedRes = await completedRes.json()
+      const completedRes = await res.json()
       console.log(completedRes) // success-not success
 
     } catch(err) {

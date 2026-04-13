@@ -1,9 +1,15 @@
+const { data } = require('../frontend/javascript/memory')
+
 const fs = require('fs').promises
 
-async function storeNewMovement(req, res, next) {  // non va, errore 500
+async function storeNewMovement(req, res, next) {
   try {
-    const movementToStore = JSON.stringify(req.body)
-    await fs.appendFile('../database.json', movementToStore)
+    const database = await fs.readFile('../database.json', 'utf-8')
+    
+    const data = database ? JSON.parse(database) : []
+    console.log(data)
+    data.push(req.body)
+    await fs.writeFile('../database.json', JSON.stringify(data, null, 2))
     next()
 
   } catch(err) {
