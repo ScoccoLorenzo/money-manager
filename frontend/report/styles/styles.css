@@ -1,0 +1,17 @@
+.year-container {
+  background-color: aqua;
+}
+.month-container {
+  background-color: red;
+  display: grid;
+  grid-template-columns: repeat(6, 230px);
+  align-items: center;
+  padding-left: 20px;
+}
+.month-report {
+  background-color: yellow;
+  height: 230px;
+  width: 200px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
