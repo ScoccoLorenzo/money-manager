@@ -1,0 +1,37 @@
+[
+  {
+    "type": "expense",
+    "value": 0,
+    "scope": "",
+    "date": "2026-04-16",
+    "notes": ""
+  },
+  {
+    "type": "expense",
+    "value": 0,
+    "scope": "",
+    "date": "2026-04-23",
+    "notes": ""
+  },
+  {
+    "type": "expense",
+    "value": 0,
+    "scope": "benzina",
+    "date": "2026-04-15",
+    "notes": ""
+  },
+  {
+    "type": "expense",
+    "value": 0,
+    "scope": "",
+    "date": "2027-07-15",
+    "notes": ""
+  },
+  {
+    "type": "expense",
+    "value": 0,
+    "scope": "",
+    "date": "2026-03-19",
+    "notes": ""
+  }
+]
