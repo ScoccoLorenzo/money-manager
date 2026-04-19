@@ -17,7 +17,7 @@
     "type": "expense",
     "value": 0,
     "scope": "benzina",
-    "date": "2026-04-15",
+    "date": "2028-03-15",
     "notes": ""
   },
   {
@@ -31,7 +31,7 @@
     "type": "expense",
     "value": 0,
     "scope": "",
-    "date": "2026-03-19",
+    "date": "2028-03-19",
     "notes": ""
   }
 ]

@@ -1,5 +1,3 @@
-const { data } = require('../frontend/javascript/memory')
-
 const fs = require('fs').promises
 
 async function storeNewMovement(req, res, next) {
@@ -17,4 +15,21 @@ async function storeNewMovement(req, res, next) {
   }
 }
 
-module.exports = {storeNewMovement}
+async function getMonthlyData(req, res, next) {
+  const {month} = req.params
+  const movements = []
+  const database = await fs.readFile('../database.json', 'utf-8')
+  if(!database) {
+    res.status(404).json({message: 'Empty database'})
+  }
+  const data = JSON.parse(database)
+
+  data.forEach((movement) => {
+    if (movement.date.startsWith(month)) {
+      movements.push(movement)
+    }
+  })
+  res.json(movements)
+}
+
+module.exports = {storeNewMovement, getMonthlyData}
