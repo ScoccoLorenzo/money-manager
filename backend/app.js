@@ -15,7 +15,7 @@ app.get('/report', (req, res) => {
   res.json({result: true, message: 'success'})
 }) // get the page
 
-app.get('/api/get-data/:month', getMonthlyData) // saves in MonthlyReport object all movements of that particular month
+app.get('/api/get-data/:month', getMonthlyData) // saves in MonthlyReport object all movements of that particular month {ex. 2026-03}
 
 app.listen(5000, () => {
   console.log('Server is listening on port 5000...')

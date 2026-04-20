@@ -3,7 +3,5 @@ import {MonthlyReport} from './objects.js';
 
 initializeDropDowns(2026);
 
-
-const report = new MonthlyReport()
-const prova = await report.getData('/api/get-data/2028-03') // fetch di prova
-console.log(prova)
+/*const report = await MonthlyReport.getData('/api/get-data/2028-03') //test inizializzazione
+console.log(report.movements)*/
