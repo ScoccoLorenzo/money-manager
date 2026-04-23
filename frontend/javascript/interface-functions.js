@@ -15,7 +15,7 @@ export function initializeSaveMovement(object, memory) {
       );
       
       memory.push(movement);
-      console.log(memory);
+      //console.log(memory);
       this.reset();
     })
 }

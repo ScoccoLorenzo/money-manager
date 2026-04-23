@@ -55,7 +55,7 @@ export function initializeSubmitMovement(data, container) {
       })
 
       const completedRes = await res.json()
-      console.log(completedRes) // success-not success
+      //console.log(completedRes) // success-not success
       data.splice(index, 1)
       renderMovements(data, container);
 

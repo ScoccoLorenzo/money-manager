@@ -10,8 +10,25 @@
 }
 .month-report {
   background-color: yellow;
-  height: 230px;
+  height: 350px;
   width: 200px;
   margin-top: 15px;
   margin-bottom: 15px;
+}
+.movement-name-container {
+  background-color: aquamarine;
+  height: 220px;
+}
+.movement-name,
+.month-tot-expense-container,
+.month-tot-income-container,
+.month-budget {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: blue;
+  height: 20px;
+}
+.month-tot-expense-container {
+  margin-top: 20px;
 }

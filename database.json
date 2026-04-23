@@ -33,5 +33,47 @@
     "scope": "",
     "date": "2028-03-19",
     "notes": ""
+  },
+  {
+    "type": "expense",
+    "value": 800,
+    "scope": "benzina",
+    "date": "2026-04-24",
+    "notes": ""
+  },
+  {
+    "type": "expense",
+    "value": 300,
+    "scope": "cura-di-se",
+    "date": "2026-04-26",
+    "notes": ""
+  },
+  {
+    "type": "expense",
+    "value": 900,
+    "scope": "benzina",
+    "date": "2026-04-25",
+    "notes": "prova"
+  },
+  {
+    "type": "expense",
+    "value": 200,
+    "scope": "svago",
+    "date": "2026-04-14",
+    "notes": "prova 2"
+  },
+  {
+    "type": "expense",
+    "value": 100,
+    "scope": "benzina",
+    "date": "2026-05-01",
+    "notes": "maggio!"
+  },
+  {
+    "type": "expense",
+    "value": 500,
+    "scope": "alcol",
+    "date": "2026-04-12",
+    "notes": ""
   }
 ]
