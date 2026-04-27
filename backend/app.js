@@ -1,7 +1,7 @@
 const express = require('express')
 const app = express()
 
-const {storeNewMovement, getMonthlyData} = require('./middleware.js')
+const {storeNewMovement, getYearData} = require('./middleware.js')
 
 
 app.use(express.json())
@@ -15,7 +15,7 @@ app.get('/report', (req, res) => {
   res.json({result: true, message: 'success'})
 }) // get the page
 
-app.get('/api/get-data/:month', getMonthlyData) // saves in MonthlyReport object all movements of that particular month {ex. 2026-03}
+app.get('/api/get-data/:year', getYearData) // saves in MonthlyReport object all movements of that particular year {ex. 2026}
 
 app.listen(5000, () => {
   console.log('Server is listening on port 5000...')

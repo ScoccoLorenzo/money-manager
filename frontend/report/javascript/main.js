@@ -1,7 +1,10 @@
-import {initializeDropDowns} from './functions.js'
+import {initializeDropDowns, generateReport} from './functions.js'
 import {MonthlyReport} from './objects.js';
 
 initializeDropDowns(2026);
 
-/*const report = await MonthlyReport.getData('/api/get-data/2028-03') //test inizializzazione
-console.log(report.movements)*/
+const report = await MonthlyReport.getData('/api/get-data/2026') //test inizializzazione
+console.log(report)
+//console.log(report.createMonthTotalMovement('expense', 'alcol'))
+
+generateReport()

@@ -75,5 +75,12 @@
     "scope": "alcol",
     "date": "2026-04-12",
     "notes": ""
+  },
+  {
+    "type": "income",
+    "value": 500,
+    "scope": "",
+    "date": "2026-04-25",
+    "notes": ""
   }
 ]

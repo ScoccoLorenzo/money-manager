@@ -15,8 +15,8 @@ async function storeNewMovement(req, res, next) {
   }
 }
 
-async function getMonthlyData(req, res, next) {
-  const {month} = req.params
+async function getYearData(req, res, next) {
+  const {year} = req.params
   const movements = []
   const database = await fs.readFile('../database.json', 'utf-8')
   if(!database) {
@@ -25,11 +25,11 @@ async function getMonthlyData(req, res, next) {
   const data = JSON.parse(database)
 
   data.forEach((movement) => {
-    if (movement.date.startsWith(month)) {
+    if (movement.date.startsWith(year)) {
       movements.push(movement)
     }
   })
   res.json(movements)
 }
 
-module.exports = {storeNewMovement, getMonthlyData}
+module.exports = {storeNewMovement, getyearlyData}
