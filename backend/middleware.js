@@ -32,4 +32,4 @@ async function getYearData(req, res, next) {
   res.json(movements)
 }
 
-module.exports = {storeNewMovement, getyearlyData}
+module.exports = {storeNewMovement, getYearData}

@@ -57,6 +57,48 @@
   },
   {
     "type": "expense",
+    "value": 900,
+    "scope": "benzina",
+    "date": "2027-04-25",
+    "notes": "prova"
+  },
+  {
+    "type": "expense",
+    "value": 900,
+    "scope": "benzina",
+    "date": "2026-05-25",
+    "notes": "prova"
+  },
+  {
+    "type": "expense",
+    "value": 900,
+    "scope": "benzina",
+    "date": "2026-06-25",
+    "notes": "prova"
+  },
+  {
+    "type": "expense",
+    "value": 900,
+    "scope": "benzina",
+    "date": "2026-12-25",
+    "notes": "prova"
+  },
+  {
+    "type": "expense",
+    "value": 900,
+    "scope": "benzina",
+    "date": "2026-10-25",
+    "notes": "prova"
+  },
+  {
+    "type": "expense",
+    "value": 1100,
+    "scope": "benzina",
+    "date": "2026-01-25",
+    "notes": "prova"
+  },
+  {
+    "type": "expense",
     "value": 200,
     "scope": "svago",
     "date": "2026-04-14",
