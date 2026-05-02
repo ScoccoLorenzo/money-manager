@@ -1,9 +1,14 @@
-import {generateReport} from './functions.js'
+import {generateReport, renderReport} from './functions.js'
 import {MonthlyReport} from './objects.js';
 
+const generalSelector = document.querySelector('select[name="report-year-selector"]');
+const container = document.querySelector('.js-reports-container')
 
-const html = await generateReport(MonthlyReport);
-document.querySelector('.js-reports-container').innerHTML = html
+renderReport(container, generateReport, generalSelector, MonthlyReport)
+
+generalSelector.addEventListener('change', () => {
+  renderReport(container, generateReport, generalSelector, MonthlyReport)
+})
 
 /*const report = await MonthlyReport.getData('/api/get-data/2026') //test inizializzazione
 //console.log(report)

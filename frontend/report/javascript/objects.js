@@ -12,7 +12,7 @@ export class MonthlyReport {
       }
 
       const data = await res.json()
-      console.log(data)
+      //console.log(data)
       return new MonthlyReport(data)
 
     } catch(err) {

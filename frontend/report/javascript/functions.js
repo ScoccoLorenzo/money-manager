@@ -1,5 +1,5 @@
-export async function generateReport(reportObject) {
-  const generalSelector = document.querySelector('select[name="report-year-selector"]');
+export async function generateReport(selector, reportObject) {
+  const generalSelector = selector
   const year = generalSelector.value
   const report = await reportObject.getData(`/api/get-data/${year}`)
   let reportHtml = ''
@@ -15,7 +15,7 @@ export async function generateReport(reportObject) {
         <div class="movement-name-container">
           <div class="movement-name">
             <p>benzina</p>
-            <p>${report.createMonthTotalMovement('expense', 'benzina', `${year}-${monthStringId}`)}</p>
+            <p>${report.createMonthTotalMovement('expense', 'benzina', `${year}-${monthStringId}`)}€</p>
           </div>
            <div class="movement-name">
             <p>benzina</p>
@@ -89,4 +89,9 @@ export async function generateReport(reportObject) {
     </div>
   `)*/
   return reportHtml
+}
+
+export async function renderReport(container, callback, selector, reportObject) {
+  const html = await callback(selector, reportObject);
+  container.innerHTML = html
 }
