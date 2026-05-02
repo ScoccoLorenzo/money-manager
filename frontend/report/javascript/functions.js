@@ -15,11 +15,11 @@ export async function generateReport(selector, reportObject) {
         <div class="movement-name-container">
           <div class="movement-name">
             <p>benzina</p>
-            <p>${report.createMonthTotalMovement('expense', 'benzina', `${year}-${monthStringId}`)}€</p>
+            <p>${report.createMonthTotalMovement('expense', `${year}-${monthStringId}`, 'benzina')}€</p>
           </div>
            <div class="movement-name">
             <p>benzina</p>
-            <p>0€</p>
+            <p>${report.createMonthBalance(`${year}-${monthStringId}`)}€</p>
           </div>
            <div class="movement-name">
             <p>benzina</p>
