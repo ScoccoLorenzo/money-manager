@@ -14,68 +14,68 @@ export async function generateReport(selector, reportObject) {
       <div class="month-report">
         <div class="movement-name-container">
           <div class="movement-name">
-            <p>benzina</p>
+            <p>Benzina</p>
             <p>${report.createMonthTotalMovement('expense', `${year}-${monthStringId}`, 'benzina')}€</p>
           </div>
            <div class="movement-name">
-            <p>benzina</p>
-            <p>${report.createMonthBalance(`${year}-${monthStringId}`)}€</p>
+            <p>Svago</p>
+            <p>${report.createMonthTotalMovement('expense', `${year}-${monthStringId}`, 'svago')}€</p>
           </div>
            <div class="movement-name">
-            <p>benzina</p>
-            <p>0€</p>
+            <p>Pasti</p>
+            <p>${report.createMonthTotalMovement('expense', `${year}-${monthStringId}`, 'pasti')}€</p>
           </div>
            <div class="movement-name">
-            <p>benzina</p>
-            <p>0€</p>
+            <p>Alcol</p>
+            <p>${report.createMonthTotalMovement('expense', `${year}-${monthStringId}`, 'alcol')}€</p>
           </div>
            <div class="movement-name">
-            <p>benzina</p>
-            <p>0€</p>
+            <p>Vestiti</p>
+            <p>${report.createMonthTotalMovement('expense', `${year}-${monthStringId}`, 'vestiti')}€</p>
           </div>
            <div class="movement-name">
-            <p>benzina</p>
-            <p>0€</p>
+            <p>Cura di sè</p>
+            <p>${report.createMonthTotalMovement('expense', `${year}-${monthStringId}`, 'cura-di-se')}€</p>
           </div>
            <div class="movement-name">
-            <p>benzina</p>
-            <p>0€</p>
+            <p>Sport</p>
+            <p>${report.createMonthTotalMovement('expense', `${year}-${monthStringId}`, 'sport')}€</p>
           </div>
            <div class="movement-name">
-            <p>benzina</p>
-            <p>0€</p>
+            <p>Hobby</p>
+            <p>${report.createMonthTotalMovement('expense', `${year}-${monthStringId}`, 'hobby')}€</p>
           </div>
            <div class="movement-name">
-            <p>benzina</p>
-            <p>0€</p>
+            <p>Istruzione</p>
+            <p>${report.createMonthTotalMovement('expense', `${year}-${monthStringId}`, 'istruzione')}€</p>
           </div>
            <div class="movement-name">
-            <p>benzina</p>
-            <p>0€</p>
+            <p>Salute</p>
+            <p>${report.createMonthTotalMovement('expense', `${year}-${monthStringId}`, 'salute')}€</p>
           </div>
            <div class="movement-name">
-            <p>benzina</p>
-            <p>0€</p>
+            <p>Macchina</p>
+            <p>${report.createMonthTotalMovement('expense', `${year}-${monthStringId}`, 'macchina')}€</p>
           </div>
            <div class="movement-name">
-            <p>benzina</p>
-            <p>0€</p>
+            <p>Necessità</p>
+            <p>${report.createMonthTotalMovement('expense', `${year}-${monthStringId}`, 'necessità')}€</p>
           </div>
            <div class="movement-name">
-            <p>benzina</p>
-            <p>0€</p>
-          </div>
-
-          <div class="month-tot-expense-container">
-            <p>Spese totali</p>
-            <p>0€</p>
+            <p>Regali</p>
+            <p>${report.createMonthTotalMovement('expense', `${year}-${monthStringId}`, 'regali')}€</p>
           </div>
           <div class="month-tot-income-container">
             <p>Entrate totali</p>
-            <p>0€</p>
-          </div><div class="month-budget">
+            <p>${report.createMonthTotalMovement('income', `${year}-${monthStringId}`)}€</p>
+          </div>
+          <div class="month-tot-expense-container">
+            <p>Spese totali</p>
+            <p>${report.createMonthTotalMovement('expense', `${year}-${monthStringId}`)}€</p>
+          </div>
+          <div class="month-balance">
             <p>Bilancio</p>
-            <p>0€</p>
+            <p>${report.createMonthBalance(`${year}-${monthStringId}`)}€</p>
           </div>
         </div>
       </div>

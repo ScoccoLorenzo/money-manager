@@ -22,14 +22,14 @@
 .movement-name,
 .month-tot-expense-container,
 .month-tot-income-container,
-.month-budget {
+.month-balance {
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: blue;
   height: 20px;
 }
-.month-tot-expense-container {
+.month-tot-income-container {
   margin-top: 20px;
 }
 .header-container {
