@@ -9,8 +9,8 @@ function renderMovements(data, container) {
         <p>${movement.scope}</p>
         <p>${movement.date}</p>
         <p>${movement.notes}</p>
-        <button type="button" class="js-delete-movement-button" data-index="${index}">Delete</button>
-        <button type="submit" data-index="${index}" class="js-submit-button">Submit</button>
+        <button type="button" class="delete-movement-button js-delete-movement-button" data-index="${index}">Delete</button>
+        <button type="submit" data-index="${index}" class="submit-button js-submit-button">Submit</button>
       </form>
       `
     })

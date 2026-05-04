@@ -1,17 +1,81 @@
-.movement-form {
-  background-color: aqua;
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
 }
-.movement-display {
-  height: 30px;
-  width: 1fr;
-  background-color: brown;
+.headers-container {
+  display: flex;
+  padding-left: 30px;
+  justify-content: space-between;
+  padding: 10px 10px;
+}
+.title1 {
+  font-size: 40px;
+  padding: 10px 10px;
+  font-weight: bold;
+  box-shadow: 5px 10px 8px rgba(0, 0, 0, 0.5)
+}
+.movement-form {
   display: flex;
   align-items: center;
+  height: 35px;
+  padding: 10px 10px;
+  justify-content: space-evenly;
+  border-radius: 8px;
+  box-shadow: 5px 10px 8px rgba(0, 0, 0, 0.5);
+  font-size: 20px;
 }
-.movement-display p {
-  margin-left: 20px;
+.movement-form input,
+.movement-form select,
+.movement-form input::placeholder {
+  height: 50px;
+  padding-left: 5px;
+  margin-right: 5px;
+  font-weight: bold;
+  border: none;
+  background-color: rgb(174, 174, 174);
+  color: black;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 20px;
 }
-.movement-display button {
-  margin-left: 25px;
-  height: 25px;
+.movement-form button,
+.movement-display button,
+.delete-movement-button,
+.submit-button {
+  width: 200px;
+  height: 50px;
+  padding-left: 5px;
+  margin-right: 5px;
+  font-weight: bold;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  background-color: black;
+  color: white;
+  font-size: 20px;
+}
+.movement-display-container {
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: 15px;
+  border: 1px solid;
+  font-size: 20px;
+}
+.movement-display {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: auto;
+  align-items: center;
+  background-color: rgb(174, 174, 174);
+  border-top: 1px solid;
+}
+.delete-movement-button:hover {
+  background-color: red;
+  color: black;
+  transition: 0.3s;
+}
+.movement-form button:hover,
+.submit-button:hover {
+  background-color: green;
+  color: black;
+  transition: 0.3s;
 }
