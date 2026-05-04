@@ -68,11 +68,11 @@ export async function generateReport(selector, reportObject) {
             <p>${report.createMonthTotalMovement('expense', `${year}-${monthStringId}`, 'regali')}€</p>
           </div>
           <div class="month-tot-income-container">
-            <p>Entrate totali</p>
+            <p>Entrate tot.</p>
             <p>${report.createMonthTotalMovement('income', `${year}-${monthStringId}`)}€</p>
           </div>
           <div class="month-tot-expense-container">
-            <p>Spese totali</p>
+            <p>Spese tot.</p>
             <p>${report.createMonthTotalMovement('expense', `${year}-${monthStringId}`)}€</p>
           </div>
           <div class="month-balance">

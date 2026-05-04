@@ -1,40 +1,63 @@
-.year-container {
-  background-color: aqua;
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+.header-container {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  padding: 15px 15px;
+  border-bottom: 2px solid black;
+  border-top: 2px solid black;
+  height: 80px;
+  box-shadow: 5px 10px 8px rgba(0, 0, 0, 0.5);
+}
+.report-year-selector {
+  border: none;
+  border-radius: 10px;
+  padding-left: 15px;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  height: 60px;
+  width: 120px;
+  background-color: rgb(174, 174, 174);
+  color: black;
 }
 .reports-container {
-  background-color: red;
   display: grid;
-  grid-template-columns: repeat(6, 230px);
+  grid-template-columns: repeat(6, 160px);
   align-items: center;
-  padding-left: 20px;
 }
 .month-report {
-  background-color: yellow;
-  height: 350px;
-  width: 200px;
-  margin-top: 15px;
-  margin-bottom: 15px;
+  font-size: 18px;
+  display: grid;
+  height: auto;
+  border: 2px solid black;
+  margin: 8px 2px;
 }
 .month-name {
-  background-color: aqua;
+  background-color: black;
+  color: white;
   height: 23px;
 }
 .movement-name-container {
-  background-color: aquamarine;
-  height: 220px;
+  height: auto
 }
 .movement-name,
 .month-tot-expense-container,
 .month-tot-income-container,
 .month-balance {
   display: flex;
+  padding: 3px;
+  border-bottom: 1px solid black;
+  border-top: 1px solid black;
   justify-content: space-between;
   align-items: center;
-  background-color: blue;
-  height: 20px;
+  background-color: rgb(174, 174, 174);
+  height: 30px;
 }
 .month-tot-income-container {
-  margin-top: 20px;
+  margin-top: 10px;
 }
 .header-container {
   margin-bottom: 20px;

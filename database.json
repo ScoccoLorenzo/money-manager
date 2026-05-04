@@ -173,5 +173,12 @@
     "scope": "",
     "date": "2026-01-23",
     "notes": "prova2"
+  },
+  {
+    "type": "income",
+    "value": 100000,
+    "scope": "",
+    "date": "2026-01-16",
+    "notes": ""
   }
 ]
