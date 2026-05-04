@@ -2,6 +2,7 @@ export async function generateReport(selector, reportObject) {
   const generalSelector = selector
   const year = generalSelector.value
   const report = await reportObject.getData(`/api/get-data/${year}`)
+  const months = ['Gennaio', 'Febbraio', 'Marzo', 'Aprile', 'Maggio', 'Giugno', 'Luglio', 'Agosto', 'Settembre', 'Ottobre', 'Novembre', 'Dicembre']
   let reportHtml = ''
 
   //console.log(year)
@@ -12,6 +13,7 @@ export async function generateReport(selector, reportObject) {
     //console.log(report)
     reportHtml += `
       <div class="month-report">
+        <div class="month-name">${months[i - 1]}</div>
         <div class="movement-name-container">
           <div class="movement-name">
             <p>Benzina</p>
