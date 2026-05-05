@@ -5,39 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
   <body>
-    <div class="headers-container">
-      <p class="title1">GESTORE DI CASHFLOW</p>
-      <a href="/report">Report Page</a>
-    </div>
+    <div class="external-headers-container">
+      <div class="headers-container">
+        <p class="title1">GESTORE DI CASHFLOW</p>
+        <a class="link1" style="margin: 0px 0px;" href="/report">Report Page</a>
+      </div>
 
-    <form class="movement-form" method="post">
-      <select name="movement-type">
-        <option value="expense">Expense</option>
-        <option value="income">Income</option>
-      </select>
-      <input type="text" name="movementValue" placeholder="Value">
-      <select name="movement-scope">
-        <option value=""></option>
-        <option value="benzina">benzina</option>
-        <option value="svago">svago</option>
-        <option value="pasti">pasti</option>
-        <option value="alcol">alcol</option>
-        <option value="vestiti">vestiti</option>
-        <option value="cura-di-se">cura di sè</option>
-        <option value="sport">sport</option>
-        <option value="hobby">hobby</option>
-        <option value="istruzione">istruzione</option>
-        <option value="salute">salute</option>
-        <option value="macchina">macchina</option>
-        <option value="necessità">necessità</option>
-        <option value="regali">regali</option>        
-      </select>
-      <input type="date" name="movementDate" placeholder="Date">
-      <input type="text" name="movementNotes" placeholder="Notes">  
-      <button type="submit">Confirm</button>
-    </form>
-
-    <div class="movement-display-container">
+      <form class="movement-form" method="post">
+        <select name="movement-type">
+          <option value="expense">Expense</option>
+          <option value="income">Income</option>
+        </select>
+        <input type="text" name="movementValue" placeholder="Value">
+        <select name="movement-scope">
+          <option value=""></option>
+          <option value="benzina">benzina</option>
+          <option value="svago">svago</option>
+          <option value="pasti">pasti</option>
+          <option value="alcol">alcol</option>
+          <option value="vestiti">vestiti</option>
+          <option value="cura-di-se">cura di sè</option>
+          <option value="sport">sport</option>
+          <option value="hobby">hobby</option>
+          <option value="istruzione">istruzione</option>
+          <option value="salute">salute</option>
+          <option value="macchina">macchina</option>
+          <option value="necessità">necessità</option>
+          <option value="regali">regali</option>        
+        </select>
+        <input type="date" name="movementDate" placeholder="Date">
+        <input type="text" name="movementNotes" placeholder="Notes">  
+        <button type="submit">Confirm</button>
+      </form>
+      </div>
+      
+      <div class="movement-display-container">
     </div>
     
     <script type="module" src="./javascript/main.js"></script>

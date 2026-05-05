@@ -194,5 +194,12 @@
     "scope": "",
     "date": "",
     "notes": ""
+  },
+  {
+    "type": "expense",
+    "value": 50000,
+    "scope": "pasti",
+    "date": "2026-05-16",
+    "notes": ""
   }
 ]
