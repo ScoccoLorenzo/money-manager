@@ -1,4 +1,4 @@
-function renderMovements(data, container) {
+export function renderMovements(data, container) {
   let intermediateContainer = '';
 
   data.forEach((movement, index) => {
@@ -27,7 +27,7 @@ export function initializeMovementsDisplay(data, container) {
     })
 }
 
-export function initializeDeleteButtons(data, container){
+export function initializeDeleteButtons(data, container, key, localStorageCallback){
   // inizializza i delete buttons
   document.querySelector('.movement-display-container')
     .addEventListener('click', (e) => {
@@ -36,11 +36,12 @@ export function initializeDeleteButtons(data, container){
         const index = Number(e.target.dataset.index);
         data.splice(index, 1);
         renderMovements(data, container);
+        localStorageCallback(key, data);
       }
     })
 }
 
-export function initializeSubmitMovement(data, container) {
+export function initializeSubmitMovement(data, container, key, localStorageCallback) {
   container.addEventListener('submit', async function(e) {
     e.preventDefault();
     //dati da inviare
@@ -58,9 +59,18 @@ export function initializeSubmitMovement(data, container) {
       //console.log(completedRes) // success-not success
       data.splice(index, 1)
       renderMovements(data, container);
+      localStorageCallback(key, data);
 
     } catch(err) {
       console.log(err)
     }
   })
+}
+
+export function storeMovementsInLocalStorage(key, data) {
+  localStorage.setItem(key, JSON.stringify(data))
+}
+
+export function uploadMovementsFromLocalStorage(key) {
+  return JSON.parse(localStorage.getItem(key))
 }

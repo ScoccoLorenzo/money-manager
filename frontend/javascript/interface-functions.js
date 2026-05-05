@@ -1,4 +1,4 @@
-export function initializeSaveMovement(object, memory) {
+export function initializeSaveMovement(object, data, key, localStorageCallback) {
   // crea un Movement e salva l'oggetto dentro memory quando clicco submit
   document.querySelector('.movement-form')
     .addEventListener('submit', function(e) {
@@ -14,7 +14,8 @@ export function initializeSaveMovement(object, memory) {
         this.movementNotes.value
       );
       
-      memory.push(movement);
+      data.push(movement);
+      localStorageCallback(key, data);
       //console.log(memory);
       this.reset();
     })

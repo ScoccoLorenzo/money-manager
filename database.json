@@ -180,5 +180,19 @@
     "scope": "",
     "date": "2026-01-16",
     "notes": ""
+  },
+  {
+    "type": "expense",
+    "value": 50000,
+    "scope": "benzina",
+    "date": "2026-01-10",
+    "notes": ""
+  },
+  {
+    "type": "expense",
+    "value": 0,
+    "scope": "",
+    "date": "",
+    "notes": ""
   }
 ]

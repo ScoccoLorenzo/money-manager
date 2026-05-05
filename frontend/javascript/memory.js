@@ -1,5 +1,3 @@
-export let data = [];
-
 export class Movement {
   constructor(type, value, scope, date, notes) {
     this.type = type

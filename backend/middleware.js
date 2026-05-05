@@ -27,7 +27,7 @@ async function getYearData(req, res, next) {
     const data = JSON.parse(database)
 
     data.forEach((movement) => {
-      if (movement.date.startsWith(year)) {
+      if (movement && movement.date.startsWith(year)) {
         movements.push(movement)
       }
     })
