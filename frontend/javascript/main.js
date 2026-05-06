@@ -14,5 +14,3 @@ initializeSaveMovement(Movement, data, localStorageKey, storeMovementsInLocalSto
 initializeMovementsDisplay(data, container);
 initializeDeleteButtons(data, container, localStorageKey, storeMovementsInLocalStorage);
 initializeSubmitMovement(data, container, localStorageKey, storeMovementsInLocalStorage);
-
-// bisogna implementare il local storage, ora salva in local ma non renderizza alla ricarica, risolvi

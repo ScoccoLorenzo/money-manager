@@ -4,9 +4,9 @@ export class MonthlyReport {
     this.movements = data
   }
   
-  static async getData(url) { //factory method
+  static async getData(url) {
     try {
-      const res = await fetch(url) // /api/get-data/:year
+      const res = await fetch(url)
       if(!res.ok) {
         throw new Error(`Errore HTTP: ${res.status}`);
       }
@@ -20,14 +20,14 @@ export class MonthlyReport {
     }
   }
 
-  createMonthTotalMovement(type, month, scope) { //month has to be in form 2000-01
+  createMonthTotalMovement(type, month, scope) { 
     let sum = 0
     this.movements.forEach(movement => {
       const date = new Date(movement.date).toISOString().slice(0, 10)
       if (movement.type === type && movement.scope === scope && date.startsWith(month)) {
         sum += movement.value
       } else if (movement.type === type && scope === undefined && date.startsWith(month)) {
-        sum += movement.value //se non passo scope ho la somma totale di expense o income
+        sum += movement.value
       }
     })
     sum = (sum / 100)

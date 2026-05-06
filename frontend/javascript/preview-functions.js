@@ -28,11 +28,9 @@ export function initializeMovementsDisplay(data, container) {
 }
 
 export function initializeDeleteButtons(data, container, key, localStorageCallback){
-  // inizializza i delete buttons
   document.querySelector('.movement-display-container')
     .addEventListener('click', (e) => {
       if (e.target.classList.contains('js-delete-movement-button')) {
-        //elimina l'oggetto e renderizza le note
         const index = Number(e.target.dataset.index);
         data.splice(index, 1);
         renderMovements(data, container);

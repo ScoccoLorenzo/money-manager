@@ -5,12 +5,9 @@ export async function generateReport(selector, reportObject) {
   const months = ['Gennaio', 'Febbraio', 'Marzo', 'Aprile', 'Maggio', 'Giugno', 'Luglio', 'Agosto', 'Settembre', 'Ottobre', 'Novembre', 'Dicembre']
   let reportHtml = ''
 
-  //console.log(year)
   for (let i = 1; i <= 12; i++) {
     let monthStringId = ''
     monthStringId = String(i).padStart(2, '0');
-    //console.log(`${year}-${monthStringId}`)
-    //console.log(report)
     reportHtml += `
       <div class="month-report">
         <div class="month-name">${months[i - 1]}</div>
@@ -83,13 +80,6 @@ export async function generateReport(selector, reportObject) {
       </div>
     `
   }
-
-  //console.log(reportHtml)
-  /*document.body.insertAdjacentHTML('beforeend',`
-    <div class="month-container js-month-container-2026">
-      ${reportHtml}
-    </div>
-  `)*/
   return reportHtml
 }
 

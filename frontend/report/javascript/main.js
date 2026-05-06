@@ -9,7 +9,3 @@ renderReport(container, generateReport, generalSelector, MonthlyReport)
 generalSelector.addEventListener('change', () => {
   renderReport(container, generateReport, generalSelector, MonthlyReport)
 })
-
-/*const report = await MonthlyReport.getData('/api/get-data/2026') //test inizializzazione
-//console.log(report)
-console.log(report.createMonthTotalMovement('expense', 'alcol', '2026-04'))*/
