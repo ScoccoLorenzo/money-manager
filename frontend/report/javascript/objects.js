@@ -23,9 +23,10 @@ export class MonthlyReport {
   createMonthTotalMovement(type, month, scope) { //month has to be in form 2000-01
     let sum = 0
     this.movements.forEach(movement => {
-      if (movement.type === type && movement.scope === scope && movement.date.startsWith(month)) {
+      const date = new Date(movement.date).toISOString().slice(0, 10)
+      if (movement.type === type && movement.scope === scope && date.startsWith(month)) {
         sum += movement.value
-      } else if (movement.type === type && scope === undefined && movement.date.startsWith(month)) {
+      } else if (movement.type === type && scope === undefined && date.startsWith(month)) {
         sum += movement.value //se non passo scope ho la somma totale di expense o income
       }
     })

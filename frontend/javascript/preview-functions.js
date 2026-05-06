@@ -1,6 +1,6 @@
 export function renderMovements(data, container) {
   let intermediateContainer = '';
-
+  
   data.forEach((movement, index) => {
     intermediateContainer += `
       <form class="movement-display" method="post">

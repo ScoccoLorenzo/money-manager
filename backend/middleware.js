@@ -1,14 +1,14 @@
-const fs = require('fs').promises
+const db = require('./db.js')
 const databaseLocation = '../database.json'
 
 async function storeNewMovement(req, res, next) {
   try {
-    const database = await fs.readFile(databaseLocation, 'utf-8')
+    const {type, value, scope, date, notes } = req.body
     
-    const data = database ? JSON.parse(database) : []
-    //console.log(data)
-    data.push(req.body)
-    await fs.writeFile(databaseLocation, JSON.stringify(data, null, 2))
+    await db.query(
+      'INSERT INTO movements (type, value, scope, date, notes) VALUES ($1, $2, $3, $4, $5)',
+      [type, value, scope, date, notes]
+    )
     next()
 
   } catch(err) {
@@ -19,20 +19,18 @@ async function storeNewMovement(req, res, next) {
 async function getYearData(req, res, next) {
   try {
     const {year} = req.params
-    const movements = []
-    const database = await fs.readFile(databaseLocation, 'utf-8')
-    if(!database) {
-      res.status(404).json({message: 'Empty database'})
-    }
-    const data = JSON.parse(database)
 
-    data.forEach((movement) => {
-      if (movement && movement.date.startsWith(year)) {
-        movements.push(movement)
-      }
-    })
-    res.json(movements)
-    
+    const movements = await db.query(
+      'SELECT * FROM movements WHERE date >= $1 AND date <= $2',
+      [`${year}-01-01`, `${year}-12-31`]
+    )
+
+    if (movements.rows.length === 0) {
+      return res.status(404).json({ message: 'Empty database' })
+    }
+
+    res.json(movements.rows)
+
   } catch(err) {
     next(err)
   }
