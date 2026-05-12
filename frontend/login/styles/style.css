@@ -50,3 +50,11 @@ body {
   transition: 0.5s;
   cursor: pointer;
 }
+.error-message-container {
+  background-color: red;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 3px;
+  padding: 0px 10px;
+}
