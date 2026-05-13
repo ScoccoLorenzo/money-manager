@@ -2,21 +2,21 @@ const db = require('./db.js')
 const databaseLocation = '../database.json'
 const jwt = require('jsonwebtoken')
 
-async function controlCredentials(req, res, next) {
-  const {username, password} = req.body
+  async function controlCredentials(req, res, next) {
+    const {username, password} = req.body
 
-  if (username !== process.env.APP_USERNAME || password !== process.env.APP_PASSWORD) { 
-    return res.json({ result: false, message: 'credenziali errate' });
+    if (username !== process.env.APP_USERNAME || password !== process.env.APP_PASSWORD) { 
+      return res.json({ result: false, message: 'credenziali errate' });
+    }
+
+    const token = jwt.sign({ username }, process.env.JWT_SECRET, { expiresIn: '24h' });
+    
+    res.cookie('token', token, {
+      httpOnly: true,
+      maxAge: 24 * 60 * 60 * 1000
+    })
+    res.json({result: true})
   }
-
-  const token = jwt.sign({ username }, process.env.JWT_SECRET, { expiresIn: '24h' });
-  
-  res.cookie('token', token, {
-    httpOnly: true,
-    maxAge: 24 * 60 * 60 * 1000
-  })
-  res.json({result: true})
-}
 
 function checkToken(req, res, next) {
   const token = req.cookies?.token;

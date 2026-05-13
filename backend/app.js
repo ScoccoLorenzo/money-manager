@@ -9,7 +9,9 @@ const {controlCredentials, checkToken, storeNewMovement, getYearData} = require(
 
 app.use(express.json())
 app.use(cookieParser())
-app.use(express.static('../frontend'))
+app.use(express.static('../frontend', {
+  index: false
+}))
 
 app.get('/', (req, res) => {
   res.redirect('/login')
@@ -18,6 +20,14 @@ app.get('/', (req, res) => {
 app.get('/login', (req, res) => {
   res.sendFile(path.join(__dirname, '../frontend/login/index.html')
 )}) // get the login page
+
+app.get('/preview', checkToken, (req, res) => {
+  res.sendFile(path.join(__dirname, '../frontend/preview/index.html'))
+})
+
+app.get('/report', checkToken, (req, res) => {
+  res.sendFile(path.join(__dirname, '../frontend/report/index.html'))
+})
 
 app.post('/api/login', controlCredentials) //controlla le credenziali ed elargisce il token
 
@@ -34,6 +44,11 @@ app.get('/report', checkToken, (req, res) => {
 })
 
 app.get('/api/get-data/:year', checkToken, getYearData)
+
+app.post('/api/logout', (req, res) => {
+  res.clearCookie('token');
+  res.redirect('/login');
+})
 
 app.listen(process.env.PORT || 5000, () => {
   console.log('Server is listening...')

@@ -8,7 +8,10 @@
     <div class="external-headers-container">
       <div class="headers-container">
         <p class="title1">GESTORE DI CASHFLOW</p>
-        <a class="link1" style="margin: 0px 0px;" href="/report">Report Page</a>
+        <ul class="header-link-list">
+          <li><a style="margin: 0px 0px;" href="/report">Report Page</a></li>
+          <li><a href="/login" onclick="fetch('/api/logout', { method: 'POST' })">Logout</a></li>
+        </ul>
       </div>
 
       <form class="movement-form" method="post">

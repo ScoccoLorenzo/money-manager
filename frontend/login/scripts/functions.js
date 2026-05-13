@@ -15,7 +15,6 @@ export async function initializePostCredentials() {
 
       const data = await request.json();
       if (data.result) {
-        localStorage.setItem('token', data.token);
         window.location.href = '/preview';          
       } else {
         document.querySelector('.js-error-message-container')
